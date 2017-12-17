@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">fabiociconiTransit</string>
+
+
+    <string name="hello_world">Enter start and end address:</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_settings">Menu Settings</string>
+    <string name = "directions"> Directions:</string>
 </resources>
+
