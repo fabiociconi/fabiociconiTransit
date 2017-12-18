@@ -3,25 +3,22 @@ package com.ciconi.fabiociconitransit;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,6 +32,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+
     private TextView txtDirections;
     //
     EditText startPoint;
@@ -61,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
         List<Address> geoCodes = null;
         //get the start point from the edit text startPoint
         String startName = startPoint.getText().toString();
-        try
-        {
+        try {
             //Returns an array of Addresses that are known to describe the named location
             //do
             //get geocodes of start point
@@ -196,8 +193,6 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                     }
-
-
                 }
                 // display the results in textview txtDirections
                 Log.d("Directions", directions);
@@ -210,10 +205,8 @@ public class MainActivity extends AppCompatActivity {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-
         }
     }
-
     //
     public String readJSONFeed(String URL) {
         StringBuilder stringBuilder = new StringBuilder();
@@ -242,5 +235,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return stringBuilder.toString();
     }
-
 }
